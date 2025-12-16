@@ -1,0 +1,857 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F7F9FC;
+    color: #222222;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    color: #3E6B82;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1D4D61;
+}
+
+
+body.wp-customizer {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* --- LAYOUT GERAL --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0; 
+}
+
+/* --- TIPOGRAFIA --- */
+h1, h2, h3, h4 {
+    color: #1D4D61;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    border-bottom: 3px solid #E7F1F6;
+    padding-bottom: 1rem;
+    color: #3E6B82; 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem; 
+    border-bottom: none; 
+    padding-bottom: 0; 
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #3E6B82; 
+}
+
+h4 {
+    color: #3E6B82;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1D4D61;
+    line-height: 1;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.logo span {
+    font-size: 1.4rem;
+    color: #3E6B82;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #222;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #1D4D61;
+    border-bottom: 2px solid #1D4D61;
+}
+
+.botao-ligar {
+    background-color: #3E6B82;
+    color: #fff;
+    padding: 0.6rem 1.6rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.botao-ligar:hover {
+    background-color: #1D4D61;
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: center; 
+    gap: 1.5rem; 
+    margin-top: 2rem;
+    flex-wrap: wrap; 
+}
+/* AQUI */
+.entry-content, 
+.page-content, 
+.vc_column,
+.vc_column-inner,
+.elementor-widget-container,
+.wpb_wrapper {
+    text-align: center !important;
+}
+    
+
+.botao,
+.botao-secundario {
+    display: inline-flex !important;
+    width: auto !important;
+    margin: 5px !important;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding: 0.875rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.botao {
+    background-color: #25D366;     /* Cor WhatsApp */
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+}
+
+.botao:hover {
+    background-color: #1D4D61; /* Cor de Hover mais sóbria */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao-secundario {
+    background-color: #C2D0D9;
+    color: #222222;
+    border: 2px solid #C2D0D9;
+}
+
+.botao-secundario:hover {
+    background-color: #9db8c7;
+    border-color: #9db8c7;
+}
+
+
+/* --- SEÇÃO #inicio (HERO) --- */
+#inicio {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+}
+
+#inicio span {
+    color: #3E6B82;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+#inicio h1 {
+	text-align: center; 
+    margin-left: auto;  
+    margin-right: auto;
+    color: #1D4D61;
+    font-size: 3rem;
+    margin: 1rem 0;
+    max-width: 800px;
+}
+
+#inicio p {
+	text-align: center;
+    margin-left: auto;  
+    margin-right: auto;
+    font-size: 1.1rem;
+    color: #222222;
+    font-style: italic;
+    max-width: 700px;
+    margin-bottom: 2rem; 
+}
+
+/* --- SEÇÃO QUEM SOMOS --- */
+.secao-quem-somos {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-historia {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.secao-quem-somos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #143C52;
+}
+    margin-bottom: 2rem;
+}
+
+
+.imagem-historia {
+    flex: 1;
+    min-width: 300px;
+}
+
+.imagem-historia img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #143C52;
+}
+
+.texto-historia {
+    flex: 2;
+    min-width: 300px;
+}
+
+.container-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card-valor {
+    background-color: #E7F1F6;
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid #3E6B82;
+}
+
+
+.secao-programas {
+    padding: 4rem 2rem;
+}
+
+.container-programas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card-programa {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #143C52;
+}
+
+.secao-doacoes {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-tipos-doacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card-tipo-doacao {
+    background-color: #E7F1F6;
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid #275A6E;
+    text-align: center;
+}
+
+.container-dados-doacao {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #E7F1F6;
+    border-radius: 10px;
+}
+
+.info-bancaria {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Labels */
+.info-bancaria .label,
+.info-bancaria strong {
+    color: #1D4D61;
+    font-weight: bold;
+}
+
+/* Linha Banco + Botão */
+.linha-banco {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+}
+
+
+
+
+.btn-copiar-pix {
+    background-color: #3E6B82;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.btn-copiar-pix:hover {
+    background-color: #2f5568;
+}
+
+
+.btn-copiar-pix.copiado {
+    background-color: #2e7d32; 
+}
+
+
+.btn-copiar-pix:active,
+.btn-copiar-pix:focus {
+    background-color: #3E6B82;
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.secao-galeria {
+    padding: 4rem 2rem;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 3px solid #143C52;
+}
+
+/* Imagens da galeria */
+.imagem-ampliavel {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.imagem-ampliavel:hover {
+    transform: scale(1.05);
+}
+
+/* OVERLAY – escondido por padrão */
+.overlay-imagem {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+
+    /* ESSENCIAL */
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+/* Overlay ativo */
+.overlay-imagem.ativo {
+    display: flex;
+}
+
+/* Imagem ampliada */
+.overlay-imagem img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    animation: zoom 0.3s ease;
+}
+
+/* Animação */
+@keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* Botão fechar (X) */
+.overlay-imagem .fechar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+.secao-depoimentos {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#depoimento-do-fundador article {
+    max-width: 800px;
+    max-height: 600px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; 
+    height: 100%;
+}
+
+#depoimento-do-fundador iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.secao-contato {
+    padding: 4rem 2rem;
+}
+
+.container-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.info-contato {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contato img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #143C52;
+    margin-top: 2rem;
+}
+
+.form-contato {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 0.75rem;
+    border: 2px solid #C2D0D9;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+
+footer {
+    background-color: #1D4D61;
+    color: #ffffff;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.footer-info h4, .footer-links h4, .footer-recursos h4, .footer-social h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul, .footer-recursos ul {
+    list-style: none;
+}
+
+.footer-links a, .footer-recursos a, .footer-social a {
+    color: #C2D0D9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #275A6E;
+    margin-top: 2rem;
+}
+
+.whatsapp-float-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    
+    /* 1. REGRAS GERAIS DE VISUALIZAÇÃO */
+    body,  {
+        overflow-x: hidden !important;
+        overflow-y: scroll !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        word-wrap: break-word !important;
+        min-width: 0 !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+        padding: 0 !important; 
+        margin: 0 !important;
+    }
+	
+    main {
+        padding: 0 4px !important;
+        width: 100% !important;
+    }
+
+    section {
+        padding: 0.7rem 0 !important 
+    }
+    
+    
+    /* 2. TAMANHOS DE FONTES COMPACTADOS */
+    h1 { font-size: 1.3rem !important; }
+    h2 { font-size: 1.2rem !important; margin-bottom: 0.5rem !important; }
+    h3 { font-size: 1rem !important; }
+    p, nav a, .footer-links a, .footer-recursos a {
+        font-size: 0.7rem !important;
+    }
+    
+    .secao-hero {
+        padding: 1.5rem 0 !important;
+    }
+	
+    /* 3. PADDINGS E MARGINS DE BLOCOS */
+    .secao-quem-somos, .secao-doacoes, .secao-depoimentos, .info-contato, .mapa,
+    .card-valor, .card-programa, .card-tipo-doacao {
+        padding: 0.5rem !important;
+        margin: 0.3rem !important;
+    }
+	
+	
+
+    
+    .dados-doacao-card { 
+        padding: 0.6rem 0.4rem !important; 
+        max-width: 250px !important; 
+        margin: 0.5rem auto !important; 
+    }
+
+    .dados-doacao-card .card-doacao-titulo { 
+        font-size: 0.9rem !important; 
+        margin-bottom: 0.4rem !important;
+    }
+	.linha-banco {
+        font-size: 0.7rem;
+    }
+
+    .btn-copiar-pix {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.9rem;
+    }
+
+    .dados-doacao-card p, .dados-doacao-card span {
+			
+        font-size: 0.65rem !important; 
+        line-height: 1.1 !important; 
+        margin-bottom: 0.1rem !important;
+    }
+    
+    /* 5. SEÇÃO INÍCIO/HERO */
+    #inicio {
+        text-align: center !important;
+        padding: 0.3rem !important;
+    }
+    #inicio h1 {
+        font-size: 1.2rem !important;
+    }
+    #inicio p {
+        font-size: 0.8rem !important;
+    }
+ 
+    
+    /* 6. HEADER E NAVEGAÇÃO */
+    header {
+        position: static !important;
+    }
+    
+    .container-header {
+        min-height: 0 !important;
+        flex-direction: column !important;
+        gap: 0.1rem !important;
+        align-items: center!important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .logo, nav, .botao-ligar {
+        width: 100% !important;
+        max-width: 220px !important; 
+        margin: 0.1rem auto !important;
+        text-align: center !important;
+    }
+    
+    .logo {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1 !important;
+    }
+    
+    .logo img {
+        height: 60px !important; 
+    }
+
+    .logo span {
+        font-size: 0.65rem !important; 
+    }
+
+    .logo br {
+        display: none !important;
+    }
+	
+    nav ul {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.1rem !important;
+        width: 100% !important;
+    }
+
+    nav a {
+        font-size: 0.65rem !important; 
+    }
+
+    /* 7. BOTÕES */
+    .botao-ligar, .botao, .botao-secundario {
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        width: 85% !important;
+        max-width: 180px !important;
+        margin: 0.2rem auto !important;
+    }
+
+    .container-historia, .container-contato {
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+    
+    /* VÍDEO */
+    article iframe {
+        width: 100% !important;
+        height: 100% !important;
+        
+  
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    
+    article {
+    
+        position: relative !important;
+        padding-bottom: 56.25% !important; 
+        height: 0 !important;
+        overflow: hidden !important;
+        max-width: 100% !important; 
+        margin: 0.3rem auto !important; 
+    }
+    /* FIM dO VÍDEO */
+   
+    .container-footer {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important; 
+        padding: 0 4px !important;
+    }
+    
+    .footer-info, .footer-links, .footer-recursos, .footer-social {
+        text-align: center !important;
+    }
+
+    
+    .whatsapp-float-button {
+        bottom: 3px !important; 
+        right: 3px !important; 
+        padding: 5px 8px !important; 
+        font-size: 0.65rem !important; 
+    }
+	
+	
+.secao-galeria {
+    padding: 4rem 2rem;
+}
+
+.grid-galeria {
+    display: grid;    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.grid-galeria img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    border: 3px solid #143C52;
+}
+
+@media (max-width: 768px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+}
